@@ -1,0 +1,37 @@
+.parent-sidebar {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(225, 228, 231, 0.7);
+    z-index: 999999999;
+
+}
+
+
+.sidebar {
+    width: 25%;
+    height: 100%;
+    background-color: white;
+    
+}
+
+
+.btns{
+    bottom: 0;
+}
+
+.up-section{
+    top: 0;
+    z-index: 1;
+}
+
+.btn-blue {
+    background-color: #0e5aa7;
+    color: white;
+}
+
+.btn-light-blue {
+    background-color: #ffffff;
+    color: #0e5aa7;
+}

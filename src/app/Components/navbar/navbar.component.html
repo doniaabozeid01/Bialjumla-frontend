@@ -1,0 +1,196 @@
+<div class="base-color base-bg-color base parent">
+    <div class=" w-custom m-auto px-3">
+
+
+        <div class="d-flex py-3 pb-0 justify-content-between align-items-center">
+
+            <div class="d-flex align-items-center justify-content-center p-2 w-15" style="flex-shrink: 0;">
+                <img src="../../../assets/22-011.png" class="w-100 " style="height: 60px;" alt="">
+            </div>
+
+            <div class="d-flex align-items-center p-1 w-35 rond-circle " style="flex-shrink: 0;">
+                <i class="fa-solid fa-search fs-5 mx-3 position-absolute text-secondary"></i>
+                <input type="text" class="form-control ps-5 rond-circle" placeholder="search for products">
+            </div>
+
+            <div class="d-flex align-items-center p-2 bord" style="flex-shrink: 0;">
+                <i class="fa-solid fa-location-dot fs-4 mx-2"></i>
+                <div>
+                    <p class="mb-0 fs">Delivery within 2 hours . 15,000+ products</p>
+                    <h6 class="mb-0 fs1">Maadi - Cairo</h6>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center p-2 bord" style="flex-shrink: 0;" [routerLink]="'login'">
+                <i class="fa-regular fa-user fs-4 mx-2"></i>
+                <p class="p-0 m-0 fs">Login & Register</p>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center rounded p-2" style="flex-shrink: 0;">
+                <i class="fa-brands fa-font-awesome fs-4"></i>
+            </div>
+
+            <div class="d-flex align-items-center justify-content-center rounded p-2" role="button" [routerLink]="'cart'" style="flex-shrink: 0;">
+                <i class="fa-solid fa-cart-plus fs-4"></i>
+            </div>
+        </div>
+
+
+        <div class="d-flex justify-content-start mt-3 mb-0 pb-0 " (mouseleave)="onMouseLeave($event)">
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true">All Categories</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Food Cupboard')">Food Cupboard</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Fresh Food')">Fresh Food</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Fruits & Vegetables')">Fruits & Vegetables</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Beverages')">Beverages</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Electronics & Appliances')">Electronics & Appliances</p>
+            <p class="px-2 hov-link pb-3 mb-0" (mouseenter)="enter=true" (click)="goToDetails('Baby Products')">Baby Products</p>
+        </div>
+
+
+
+
+
+        <!--              media query                 -->
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="enter" class="hover-box">
+    <div class="in-hov" (mouseenter)="enter=true" (mouseleave)="enter=false">
+
+        <div class="w-100 row p-3">
+            <div class="col-4 mt-5">
+                <p class="mb-0"> Biscuits, Crackers & Cakes
+                </p>
+                <p class="mb-0"> Premuim Biscuits
+                </p>
+                <p class="mb-0"> Coated Biscuits & Wafers
+                </p>
+                <p class="mb-0"> Crackers & Crispbread
+                </p>
+                <p class="mb-0"> Digestives & Assorted Biscuits
+                </p>
+                <p class="mb-0"> Filled Biscuits
+                </p>
+                <p class="mb-0"> Rusk
+                </p>
+                <p class="mb-0"> Cakes,Cupcake & Muffins
+                </p>
+                <p class="mb-0"> Tins, Jars & Packets
+                </p>
+                <p class="mb-0"> Coconut Milk
+                </p>
+                <p class="mb-0"> Coconut Cream
+                </p>
+                <p class="mb-0"> Canned Meat
+                </p>
+                <p class="mb-0"> Soup & Instant Noodles
+                </p>
+                <p class="mb-0"> Canned Vegetables
+                </p>
+                <p class="mb-0"> Pickles & Olives
+                </p>
+                <p class="mb-0"> Powdered Milk
+                </p>
+                <p class="mb-0"> Tuna & Seafood
+                </p>
+
+            </div>
+
+
+            <div class="col-4 mt-5">
+                <p class="mb-0"> Biscuits, Crackers & Cakes
+                </p>
+                <p class="mb-0"> Premuim Biscuits
+                </p>
+                <p class="mb-0"> Coated Biscuits & Wafers
+                </p>
+                <p class="mb-0"> Crackers & Crispbread
+                </p>
+                <p class="mb-0"> Digestives & Assorted Biscuits
+                </p>
+                <p class="mb-0"> Filled Biscuits
+                </p>
+                <p class="mb-0"> Rusk
+                </p>
+                <p class="mb-0"> Cakes,Cupcake & Muffins
+                </p>
+                <p class="mb-0"> Tins, Jars & Packets
+                </p>
+                <p class="mb-0"> Coconut Milk
+                </p>
+                <p class="mb-0"> Coconut Cream
+                </p>
+                <p class="mb-0"> Canned Meat
+                </p>
+                <p class="mb-0"> Soup & Instant Noodles
+                </p>
+                <p class="mb-0"> Canned Vegetables
+                </p>
+                <p class="mb-0"> Pickles & Olives
+                </p>
+                <p class="mb-0"> Powdered Milk
+                </p>
+                <p class="mb-0"> Tuna & Seafood
+                </p>
+
+            </div>
+
+
+
+            <div class="col-4 mt-5">
+                <p class="mb-0"> Biscuits, Crackers & Cakes
+                </p>
+                <p class="mb-0"> Premuim Biscuits
+                </p>
+                <p class="mb-0"> Coated Biscuits & Wafers
+                </p>
+                <p class="mb-0"> Crackers & Crispbread
+                </p>
+                <p class="mb-0"> Digestives & Assorted Biscuits
+                </p>
+                <p class="mb-0"> Filled Biscuits
+                </p>
+                <p class="mb-0"> Rusk
+                </p>
+                <p class="mb-0"> Cakes,Cupcake & Muffins
+                </p>
+                <p class="mb-0"> Tins, Jars & Packets
+                </p>
+                <p class="mb-0"> Coconut Milk
+                </p>
+                <p class="mb-0"> Coconut Cream
+                </p>
+                <p class="mb-0"> Canned Meat
+                </p>
+                <p class="mb-0"> Soup & Instant Noodles
+                </p>
+                <p class="mb-0"> Canned Vegetables
+                </p>
+                <p class="mb-0"> Pickles & Olives
+                </p>
+                <p class="mb-0"> Powdered Milk
+                </p>
+                <p class="mb-0"> Tuna & Seafood
+                </p>
+
+            </div>
+        </div>
+    </div>
+</div>

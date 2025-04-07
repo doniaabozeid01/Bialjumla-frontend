@@ -1,0 +1,150 @@
+<div class="parent ">
+
+    <div class="row mt">
+        <div class="col-md-6">
+            <div class="my-5">
+                <h2>Items related to your cart</h2>
+                <owl-carousel-o [options]="customOptions" class="customOptionsCart">
+                    <ng-container *ngFor="let slide of slidesStore">
+                        <ng-template carouselSlide>
+                            <div class="mx-1 p-2 d-flex justify-content-center align-items-center flex-column borderrdis bg-white"
+                                style="height: 110px;">
+                                <img [src]="slide.src" class=" w-100 h-75" alt="alt" [title]="slide.title">
+                                <p class="mb-0" role="button" (click)="addToCart()">Add</p>
+                            </div>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+
+
+            <div class="">
+                <p class="text-end ">2 items</p>
+                <div class="row bg-white items px-2 justify-content-center align-items-center mb-3">
+
+                    <div class="col-2 ">
+                        <img class="w-100 cartImg" src="../../../assets/274533_main.jpg" alt="">
+                    </div>
+
+                    <div class="col-6 p-0 ">
+                        <div class="">
+                            <p class="mb-0">Beyti Full Cream Milk - 900 ml</p>
+                            <p class="mb-0">EGP <span>107.85</span></p>
+                            <del class="mb-0">EGP <span>140.85</span></del>
+                        </div>
+                    </div>
+
+                    <div class="col-4 d-flex">
+                        <div class="out-icon" (click)="decrement()">
+                            <i class="icon fa-solid fa-minus"></i>
+                        </div>
+                        <!-- قائمة منسدلة (dropdown) تحتوي على القيم المختارة -->
+                        <select [(ngModel)]="selectedValue" class="w-50 mx-3 text-center">
+                            <option *ngFor="let number of numbers" [value]="number">{{ number }}</option>
+                        </select>
+                        <div class="out-icon" (click)="increment()">
+                            <i class="icon fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row bg-white items px-2 justify-content-center align-items-center mb-3">
+
+                    <div class="col-2">
+                        <img class="w-100 cartImg" src="../../../assets/323519_main.jpg" alt="">
+                    </div>
+
+                    <div class="col-6 p-0">
+                        <div class="">
+                            <p class="mb-0">Beyti Full Cream Milk - 900 ml</p>
+                            <p class="mb-0">EGP <span>107.85</span></p>
+                            <del class="mb-0">EGP <span>140.85</span></del>
+                        </div>
+                    </div>
+
+                    <div class="col-4 d-flex">
+                        <div class="out-icon" (click)="decrement()">
+                            <i class="icon fa-solid fa-minus"></i>
+                        </div>
+                        <!-- قائمة منسدلة (dropdown) تحتوي على القيم المختارة -->
+                        <select [(ngModel)]="selectedValue" class="w-50 mx-3 text-center">
+                            <option *ngFor="let number of numbers" [value]="number">{{ number }}</option>
+                        </select>
+                        <div class="out-icon" (click)="increment()">
+                            <i class="icon fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="mb-0 fw-bold">Subtotal</p>
+                    <p class="mb-0 fw-bold">EGP 2,340.00</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">Checkout NOW</button>
+                </div>
+            </div>
+
+
+            <div class="mt-3">
+                <p>No replacement found for 1 item</p>
+                <div class="row outStock px-2 justify-content-center align-items-center mb-3">
+
+                    <div class="col-2 position-relative">
+                        <div  class="position-relative">
+
+                            <img class="w-100  cartImg bg-info" src="../../../assets/2.jpg" alt="">
+                            <div class="overlay"></div> 
+                        </div>
+
+                        <p class="position-absolute OOS p-1">out of stock</p>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="disc">
+                            <p class="mb-0">Beyti Full Cream Milk - 900 ml</p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-4 d-flex">
+                        <button class="btn btn-light-blue ms-auto">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 checkout">
+
+            <h2>Order Summary </h2>
+            <div class="row bg-white items p-2 py-4 justify-content-center align-items-center mb-3">
+
+                <div class="col-6">
+                    <div class="">
+                        <p class="mb-0 fw-bold">EGP <span>107.85</span></p>
+                        <p class="mb-0">(inclusive of VAT)</p>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <button class="btn btn-blue w-100 py-2">Checkout all</button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <p>Available payment methods </p>
+                <img src="../../../assets/download.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>

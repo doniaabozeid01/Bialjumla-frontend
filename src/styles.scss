@@ -1,1 +1,604 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&family=Reem+Kufi:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+
+
+
+
+
+
+
+.base-color {
+  color: rgb(216, 216, 216);
+}
+
+.base-bg-color {
+
+  background-color: #0e5aa7;
+}
+
+
+body {
+  background-color: #FAFAFA;
+  // background-color: #ec0404;
+  // font-family: "Lora", serif;
+  // font-family: "Winky Sans", sans-serif;
+  font-family: 'Tajawal', Arial, sans-serif;
+
+
+  // background-color: #dd0d0d;
+}
+
+
+
+.customOptions1 .owl-theme .owl-dots,
+.customOptions1 .owl-theme .owl-nav {
+  /* text-align: center; */
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 43%;
+  left: -27px;
+  width: 104%;
+  margin: auto;
+}
+
+.customOptions1 .owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  /* margin: 5px; */
+  padding: 20px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+.customOptions1 .owl-next,
+.owl-prev {
+  background-color: #0e5aa7 !important;
+}
+
+////////////////////////////////////////////////////////
+
+.customOptions1 .owl-carousel .owl-item {
+  display: inline-block;
+  margin-right: 10px;
+  /* المسافة بين العناصر */
+}
+
+.customOptions1 .owl-carousel .owl-stage {
+  display: flex;
+  /* تأكد من أن العناصر في الـ carousel تعرض بشكل أفقي */
+}
+
+// .card {
+//   transition: transform 0.3s ease-in-out;
+// }
+
+// .card:hover {
+//   transform: translateY(-5px);  /* تأثير تحريك بسيط عند تمرير الماوس */
+// }
+
+
+
+//   .customOptions2 .owl-theme .owl-nav [class*=owl-prev] {
+//     color: #4b4b4b;
+//     font-size: 14px;
+//     /* margin: 5px; */
+//     padding:20px 10px;
+//     background-color: #ffffff!important;
+//     display: inline-block;
+//     cursor: pointer;
+//     border-top-right-radius: 10px;
+//     border-bottom-right-radius: 10px;
+//     border-top-left-radius: 0px;
+//     border-bottom-left-radius: 0px;
+
+//     border-top: 0.5px solid rgb(163, 163, 163);
+//     border-right: 0.5px solid rgb(163, 163, 163);
+//     border-bottom: 0.5px solid rgb(163, 163, 163);
+// }
+
+
+// .customOptions2 .owl-theme .owl-nav [class*=owl-next] {
+//   color: #4b4b4b;
+//   font-size: 14px;
+//   /* margin: 5px; */
+//   padding:20px 10px;
+//   background-color: #ffffff!important;
+//   display: inline-block;
+//   cursor: pointer;
+//   border-top-left-radius: 10px;
+//   border-bottom-left-radius: 10px;
+//   border-top-right-radius: 0px;
+//   border-bottom-right-radius: 0px;
+//   border-top: 0.5px solid rgb(163, 163, 163);
+//   border-left: 0.5px solid rgb(163, 163, 163);
+//   border-bottom: 0.5px solid rgb(163, 163, 163);
+
+// }
+
+// .customOptions2 .owl-theme .owl-dots,
+// .customOptions2 .owl-theme .owl-nav {
+//     /* text-align: center; */
+//     -webkit-tap-highlight-color: transparent;
+//     display: flex;
+//     justify-content: space-between;
+//     position: absolute;
+//     top: 40%;
+//     left: -5px;
+//     width: 101%;
+//     margin: auto;
+// }
+
+
+
+
+// .customOptions2 .owl-carousel .owl-item {
+//   display: inline-block;
+//   margin-right: 0px;  /* المسافة بين العناصر */
+// }
+
+
+
+
+
+// .customOptions3 .owl-theme .owl-dots,
+// .customOptions3 .owl-theme .owl-nav {
+//     /* text-align: center; */
+//     -webkit-tap-highlight-color: transparent;
+//     display: none;
+//     width: 100%;
+//     margin: auto;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .customOptions2 .owl-theme .owl-nav {
+//   display: flex;
+//   justify-content: space-between;
+//   position: absolute;
+//   top: 53%;
+//   left: -4px;
+//   width: 100.6%;
+//   margin: auto;
+// }
+
+.customOptions2 .owl-theme .owl-nav [class*=owl-prev] {
+  color: #4b4b4b;
+  font-size: 14px;
+  padding: 20px 7px;
+  background-color: #ffffff !important;
+  display: inline-block;
+  cursor: pointer;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top: 0.5px solid rgb(163, 163, 163);
+  border-right: 0.5px solid rgb(163, 163, 163);
+  border-bottom: 0.5px solid rgb(163, 163, 163);
+  position: absolute;
+  top: 40%;
+  left: -5px;
+}
+
+.customOptions2 .owl-theme .owl-nav [class*=owl-next] {
+  color: #4b4b4b;
+  font-size: 14px;
+  padding: 20px 7px;
+  background-color: #ffffff !important;
+  display: inline-block;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top: 0.5px solid rgb(163, 163, 163);
+  border-left: 0.5px solid rgb(163, 163, 163);
+  border-bottom: 0.5px solid rgb(163, 163, 163);
+  position: absolute;
+  top: 40%;
+  right: -5px;
+}
+
+.customOptions2 .owl-carousel .owl-item {
+  display: inline-block;
+}
+
+.customOptions2 .owl-theme .owl-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 43%;
+  width: 100%;
+  margin: auto;
+}
+
+.customOptions2 .owl-carousel .owl-item img {
+  width: 100%;
+  height: auto;
+}
+
+.customOptions3 .owl-theme .owl-nav {
+  display: none;
+}
+
+.customOptions3 .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 80%;
+  width: 10% !important;
+  // z-index: 9999999999999!important;
+  display: none;
+  width: 8px;
+  height: 8px;
+  margin: 0px 2px;
+  margin: auto;
+}
+
+.customOptions3:hover .owl-theme .owl-dots {
+  display: flex;
+
+}
+
+
+
+.customOptions3 img {
+  // transition: all 1s ease-in;
+}
+
+.customOptions3:hover img {
+  transform: translateY(-6px);
+}
+
+
+
+
+
+.customOptions3 .owl-dot span {
+  margin: 1px !important;
+
+}
+
+// .customOptions3 .owl-theme .owl-dots .owl-dot {
+//   background-color: #7c7b7b !important; /* لون النقط */
+//   // border-radius: 50%;
+//   width: 8px; /* حجم النقطة */
+//   height: 8px; /* ارتفاع النقطة */
+//   margin: 0 2px; /* المسافة بين النقط */
+//   cursor: pointer; /* تغيير المؤشر عند مرور الماوس على النقاط */
+//   transition: background-color 0.3s ease-in-out; /* تأثير عند التفاعل مع النقاط */
+//   // display: none;
+// }
+
+
+
+
+
+
+// // .owl-dot {
+// //   border-radius: 20%; /* لجعل النقطة دائرية */
+// // }
+// .owl-dot {
+//   width: 10px;  /* أو الحجم الذي ترغب فيه */
+//   height: 10px; /* أو الحجم الذي ترغب فيه */
+//   background-color: #db0b0b;  /* أو اللون الذي تريده */
+//   border-radius: 10%;  /* لجعلها دائرية */
+//   display: none!important;
+// }
+
+
+
+// .customOptions3 :hover .owl-dot {
+
+//   display: flex!important;
+// }
+
+
+
+.customOptions3 .owl-carousel .owl-item {
+  display: inline-block;
+  margin-right: 0;
+}
+
+.customOptions3 .owl-carousel .owl-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.customOptionsCart .owl-next {
+  position: absolute;
+  right: -15px;
+  top: 31px;
+  border-radius: 50px!important;
+}
+
+.customOptionsCart .owl-prev {
+  position: absolute;
+  left: -15px;
+  top: 31px;
+  border-radius: 50px!important;
+  background-color: #d6d6d6!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.customOptions4 .owl-theme .owl-nav {
+  display: none;
+}
+
+.customOptions4 .owl-theme .owl-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  transform: translateX(-50%);
+  top: 80%;
+  width: 10% !important;
+  display: none;
+  width: 8px;
+  height: 8px;
+  margin: 0px 2px;
+  margin: auto;
+}
+
+.customOptions4:hover .owl-theme .owl-dots {
+  display: flex;
+
+}
+
+.customOptions4:hover img {
+  transform: translateY(-6px);
+}
+
+.customOptions4 .owl-dot span {
+  margin: 1px !important;
+
+}
+
+.customOptions4 .owl-carousel .owl-item {
+  display: inline-block;
+  margin-right: 0;
+}
+
+.customOptions4 .owl-carousel .owl-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .owl-dot {
+//   background-size: cover !important;
+//   background-position: center !important;
+//   width: 50px;   /* حجم الصورة */
+//   height: 50px;  /* حجم الصورة */
+//   border-radius: 50%; /* لتصبح الصور دائرية */
+//   cursor: pointer;
+// }
+
+// .owl-dot img {
+//   display: none; /* إخفاء الصور الافتراضية */
+// }
+
+
+
+
+
+// .owl-dots-images {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 20px;
+// }
+
+// .owl-dot-image {
+//   width: 60px;
+//   height: 60px;
+//   margin: 0 5px;
+//   cursor: pointer;
+// }
+
+// .owl-dot-image img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   border-radius: 50%; /* إذا كنت ترغب في أن تكون الدوائر دائرية */
+//   transition: transform 0.3s ease;
+// }
+
+// .owl-dot-image:hover img {
+//   transform: scale(1.1); /* تكبير الصورة عند التمرير عليها */
+// }
+
+
+
+
+
+
+
+
+
+.owl-dots-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.owl-dot-image {
+  width: 60px;
+  height: 60px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.owl-dot-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* لتجعل الصور دائرية */
+  transition: transform 0.3s ease;
+}
+
+.owl-dot-image:hover img {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير عليها */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,153 @@
+<div class="parent">
+
+  <div class="row">
+    <div class="col-md-4 bg-white p-3 col-img bg-success">
+      <!-- الـ Owl Carousel -->
+      <owl-carousel-o [options]="customOptions" class="">
+        <ng-container *ngFor="let slide of slidesStore; let i = index">
+          <ng-template carouselSlide>
+            <div class="mx-1 p-2 d-flex justify-content-start align-items-center bg-white " style="height: 280px;">
+              <img [src]="currentImage" class="w-100 h-100 " alt="alt" [title]="slide.title">
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+
+      <!-- تخصيص الـ dots باستخدام الصور -->
+      <div class="owl-dots-images d-flex justify-content-between">
+        <div *ngFor="let slide of slidesStore; let i = index" class="owl-dot-image" (click)="changeImage(slide.src)">
+          <!-- عند النقر على الصورة الصغيرة يتم تغيير الصورة المعروضة -->
+          <img [src]="slide.src" class="dot-image w-100 h-100" alt="Slide Image" [title]="slide.title">
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4 p-3">
+      <h4>Helthy Choice White Eggs - 30 Eggs</h4>
+      <h4>
+        EGP 980.00 <span class="fs-6">(Inc. VAT)</span>
+      </h4>
+      <p>Sold & Delivered by Carrefour</p>
+      <h5>highlights</h5>
+      <ul>
+        <li>Rich in protein and essential vitamins</li>
+        <li>Versatile for cooking, baking, and meals</li>
+        <li>Nutrient-dense and healthy</li>
+      </ul>
+    </div>
+
+
+    <div class="col-md-4 rd-col p-4">
+      <p class="fw-bold">Get it delivered by :</p>
+      <div class="bord d-flex justify-content-start align-items-center p-2">
+        <i class="fa-solid fa-truck fs-5"></i>
+        <p class="mb-0 ms-2 fs-5">Today 7 PM - 11 PM</p>
+      </div>
+      <div class="d-flex justify-content-between align-items-center my-3 position-relative">
+        <div class="custom-dropdown w-25">
+          <div class="dropdown-header" (click)="toggleDropdown()">
+            <span class="text-dark">{{ selectedValue || 'اختر القيمة' }} <i class="fa-solid fa-arrow-down"></i></span>
+          </div>
+
+          <div class="dropdown-options" *ngIf="isDropdownOpen">
+            <div *ngFor="let item of numbers" class="dropdown-item" (click)="selectValue(item.key)">
+              <label class="d-flex justify-content-between align-items-center py-1">
+                <p class="mb-0">{{ item.key }}</p>
+                <p class="mb-0">EGP {{ item.value }}</p>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-blue text-white w-75 ms-2">ADD TO CART</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div>
+
+
+    <h4 class="mt-4">DESCRIPTION</h4>
+    <p>Energize your every morning with the Milk. It is an excellent addition to your healthy diet, whose every sip is
+      stacked with pure delight and pleasure.
+
+      This milk is a rich source of calcium and protein that not only promotes healthy wellbeing but also balances out
+      your diet. Also, it can be enjoyed on its own or by using it with other meals.</p>
+
+
+    <h4 class="mt-4">INFORMATION</h4>
+
+
+    <h6 class="fw-bold">Ingredients</h6>
+    <p>Natural Sterilized Full Cream Cow's Milk● Milk Powder● Food Stabilizers (E407● E471)● 3% Fat● 8.2% Solids.</p>
+
+    <h6 class="fw-bold">Allergy Information</h6>
+    <p>Contains Dairy</p>
+
+    <h6 class="fw-bold">Storage Condition</h6>
+    <p>Keep Refrigerated Under 30°C</p>
+
+
+
+  </div>
+
+
+
+
+
+  <div class="my-5">
+    <h4>Top Picks for you</h4>
+
+    <owl-carousel-o [options]="customOptions2" class="customOptions2">
+
+      <ng-container *ngFor="let slide of slidesStore">
+        <ng-template carouselSlide>
+          <div class="card card-bord w-100 position-relative " style="width: 18rem;">
+
+
+            <owl-carousel-o [options]="customOptions3" class="customOptions3" style="height: 170px;">
+
+              <ng-container *ngFor="let slide of slidesStore2">
+                <ng-template carouselSlide>
+                  <img [src]="slide.src" class="w-75 m-auto " style="height: 170px;" alt="...">
+                </ng-template>
+              </ng-container>
+
+            </owl-carousel-o>
+
+
+            <div class="card-add"><i class="fa-solid fa-plus"></i></div>
+            <div class="card-off">
+              <p class="mb-0 text-danger">14%</p>
+              <p class="mb-0 text-danger">Off</p>
+            </div>
+            <div class="card-body">
+              <div class="d-flex align-items-center">
+                <h5 class="card-title">14</h5>
+                <div class="ms-1">
+                  <p class="m-0 fs1">0.25</p>
+                  <p class="m-0 fs1">EGP</p>
+                </div>
+              </div>
+              <p class="text-danger"><del class="del fs1 text-dark">EGP170.50</del> 19% OFF
+              </p>
+              <p class="card-text">Some quick...</p>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+
+  </div>
+
+
+</div>

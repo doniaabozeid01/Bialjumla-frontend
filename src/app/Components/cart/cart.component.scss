@@ -1,0 +1,111 @@
+.parent {
+    max-width: 1350px;
+    margin: auto;
+    // overflow: hidden;
+
+}
+
+.mt {
+    margin-top: 150px;
+}
+
+.borderrdis {
+    border: 1px solid rgb(185, 205, 230);
+    border-radius: 8px;
+}
+
+
+
+.out-icon {
+    border-radius: 50px;
+    background-color: rgb(241, 241, 241);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    color: #0e5aa7;
+}
+
+.cartImg {
+    height: 80px;
+}
+
+
+.items {
+    border-radius: 10px;
+}
+
+
+select {
+    border: none;
+}
+
+.btn-blue {
+    background-color: #0e5aa7;
+    color: white;
+}
+
+.btn-light-blue {
+    background-color: #bfd9f3;
+    color: #0e5aa7;
+}
+
+
+.outStock {
+    border: 1px solid rgb(214, 216, 218);
+    border-radius: 10px;
+
+}
+
+.OOS {
+    background-color: rgb(252, 207, 207);
+    color: rgb(238, 24, 24);
+    z-index: 1; /* يجعل الطبقة فوق الصورة */
+
+    top: 25px;
+    left: 10px;
+}
+
+
+.checkout{
+    position: fixed;
+    left: 55%;
+    top: 22%;
+    width: 35%; 
+}
+
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(214, 214, 214, 0.6); /* اللون #d6d6d6 مع الشفافية */
+    z-index: 1; /* يجعل الطبقة فوق الصورة */
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .checkout {
+      position: static; /* اجعل الـ checkout يتحرك مع الصفحة في الشاشات الصغيرة */
+      width: 100%; /* اجعل العرض 100% ليتناسب مع الشاشات الصغيرة */
+      top: auto; /* قم بإلغاء المسافة العلوية */
+      right: auto; /* قم بإلغاء المسافة من الجهة اليمنى */
+      box-shadow: none; /* إزالة الظل لتقليل التشويش */
+      padding: 15px; /* تقليل المسافة داخل الـ checkout */
+    }
+  }

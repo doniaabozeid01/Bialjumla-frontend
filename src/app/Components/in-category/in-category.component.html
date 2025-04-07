@@ -1,0 +1,148 @@
+<div class="parent px-3">
+
+
+    <div class="row">
+
+
+
+
+        <div class="col-md-3 px-4 mt-3 mb-5 bg-white">
+            <!-- Deals Section -->
+            <div class="d-flex justify-content-between align-items-center py-2 " (click)="toggleSection('deals')">
+                <h5 class="mb-0">Deals</h5>
+                <i class="fa-solid icon" [ngClass]="isSectionActive('deals') ? 'fa-minus' : 'fa-plus'"></i>
+            </div>
+            <div *ngIf="isSectionActive('deals')" class="options p-0 ps-1 mb-4">
+                <label>
+                    <input type="checkbox" class="me-2" /> Deal 1
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Deal 2
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Deal 3
+                </label>
+            </div>
+        
+            <!-- Category Section -->
+            <div class="d-flex justify-content-between align-items-center py-2 " (click)="toggleSection('category')">
+                <h5 class="mb-0">Category</h5>
+                <i class="fa-solid icon" [ngClass]="isSectionActive('category') ? 'fa-minus' : 'fa-plus'"></i>
+            </div>
+            <div *ngIf="isSectionActive('category')" class="options p-0 ps-1 mb-4">
+                <label>
+                    <input type="checkbox" class="me-2" /> Category 1
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Category 2
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Category 3
+                </label>
+            </div>
+        
+            <!-- Brand Section -->
+            <div class="d-flex justify-content-between align-items-center py-2 " (click)="toggleSection('brand')">
+                <h5 class="mb-0">Brand</h5>
+                <i class="fa-solid icon" [ngClass]="isSectionActive('brand') ? 'fa-minus' : 'fa-plus'"></i>
+            </div>
+            <div  *ngIf="isSectionActive('brand')" class="options p-0 ps-1 mb-4">
+                <label class="">
+                    <input type="checkbox" class="me-2"  /> Brand 1
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Brand 2
+                </label>
+                <label>
+                    <input type="checkbox" class="me-2" /> Brand 3
+                </label>
+            </div>
+        </div>
+
+
+        <div class="col-md-9 ">
+
+            <div class="d-flex justify-content-between ">
+                <div>
+
+                    <h2 class="fw-bold">Fresh Food</h2>
+                    <p>781 Results</p>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-btn" (click)="toggleDropdown()">
+                        Sort by
+                        <span [innerHTML]="arrow" class="arrow"></span>
+                    </button>
+                    <div *ngIf="isDropdownVisible" class="dropdown-content">
+                        <a href="#" (click)="selectOption('Relevance')">Relevance</a>
+                        <a href="#" (click)="selectOption('Price (lowest first)')">Price (lowest first)</a>
+                        <a href="#" (click)="selectOption('Price (highest first)')">Price (highest first)</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="">
+
+                <div class="mb-5">
+
+                    <div class="row">
+                        <div class="col-md-3 p-0 mb-3" *ngFor="let slide of slidesStore">
+                            <div class="card card-bord w-100 position-relative" style="width: 18rem;" >
+
+
+                                <owl-carousel-o [options]="customOptions3" class="customOptions4"
+                                    style="height: 200px;">
+
+                                    <ng-container *ngFor="let slide of slidesStore2">
+                                        <ng-template carouselSlide>
+                                            <img [src]="slide.src" class="w-75 m-auto" style="height: 200px;"
+                                                alt="...">
+                                        </ng-template> 
+                                    </ng-container>
+
+                                </owl-carousel-o>
+
+
+                                <div class="card-add"><i class="fa-solid fa-plus"></i></div>
+                                <div class="card-off">
+                                    <p class="mb-0 text-danger">14%</p>
+                                    <p class="mb-0 text-danger">Off</p>
+                                </div>
+                                <div class="card-body" (click)="goToProductDetails()">
+                                    <div class="d-flex align-items-center">
+                                        <h5 class="card-title">14</h5>
+                                        <div class="ms-1">
+                                            <p class="m-0 fs1">0.25</p>
+                                            <p class="m-0 fs1">EGP</p>
+                                        </div>
+                                    </div>
+                                    <p class="text-danger"><del class="del fs1 text-dark">EGP170.50</del> 19% OFF
+                                    </p>
+                                    <p class="card-text">Some quick...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="text-center mb-5">
+                        <button class="m-auto btn btn-outline-blue p-2 px-4"> LOAD MORE </button>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,169 @@
+.parent {
+    max-width: 1350px;
+    margin: auto;
+    margin-top: 190px;
+}
+
+
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* بدايةً 8 صور في صف واحد */
+    gap: 20px;
+    /* المسافة بين الصور */
+}
+
+.category-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+/* When hovered, the image slightly increases in size */
+.category-item:hover img {
+    transform: scale(1.03);
+    filter: brightness(80%);
+    /* Darken image */
+}
+
+/* Add a grey overlay when the image is clicked */
+.category-item:active img {
+    transform: scale(1.01);
+    /* Slightly increase size on click */
+    filter: brightness(50%) grayscale(50%);
+    /* Grey overlay */
+}
+
+/* Optional: This can also make the clicked image stand out a bit more */
+.category-item:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds a slight shadow */
+}
+
+
+/* عند تصغير الشاشة أكثر من 1024px (مثلاً في التابلت) نخليها 4 صور في الصف */
+@media (max-width: 1024px) {
+    .categories-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 صور في الصف */
+    }
+}
+
+/* عند تصغير الشاشة أكثر من 768px، نخليها 3 صور في الصف */
+@media (max-width: 768px) {
+    .categories-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 صور في الصف */
+    }
+
+
+    .col-md-3 {
+        margin-top: 20px;
+    }
+}
+
+/* عند تصغير الشاشة أكثر من 480px، نخليها 2 صور في الصف */
+@media (max-width: 480px) {
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 صور في الصف */
+    }
+}
+
+/* إذا كانت الشاشة صغيرة جدًا (أقل من 480px) نخليها صورة واحدة في الصف */
+@media (max-width: 320px) {
+    .categories-container {
+        grid-template-columns: 1fr;
+        /* صورة واحدة في الصف */
+    }
+}
+
+
+.fs1 {
+    font-size: 9px;
+}
+
+
+
+.h-custom {
+    height: 150px;
+}
+
+
+.card-bord {
+    border: 0.5px solid rgb(224, 229, 236);
+    border-radius: 15px;
+}
+
+
+.card-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #0e5aa7;
+    color: white;
+    position: absolute;
+    right: 2px;
+    top: 43%;
+    width: 30px;
+    height: 30px;
+    // font-size: 30px;
+    z-index: 22;
+}
+
+.card-off {
+    background-color: rgb(250, 199, 199);
+    // width: 35px;
+    padding: 2px;
+    font-size: 12px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+}
+
+
+.col-md-3 {
+    // height: auto !important;
+    /* هذا سيجعل الطول يتناسب مع المحتوى */
+    // max-height: 250px; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-self: flex-start; 
+
+}
+
+.bord{
+    border-radius: 10px;
+}
+
+
+.img-adv {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-in-title {
+    transition: all 0.2s ease-in;
+}
+.img-adv:hover .img-in-title {
+    transform: scale(1.05);
+}
+
+
+.div-title{
+
+}

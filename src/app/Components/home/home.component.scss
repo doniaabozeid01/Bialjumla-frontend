@@ -1,0 +1,610 @@
+.parent {
+    max-width: 1350px;
+    margin: auto;
+    margin-top: 190px;
+}
+
+.offer-line {
+    background-color: #710a3e;
+    border-radius: 10px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* الحاوية التي تحتوي على النص والزر */
+.offer-container {
+    display: flex;
+    justify-content: space-between;
+    /* لتوزيع العناصر بين اليسار واليمين */
+    align-items: center;
+    margin-top: 70px;
+}
+
+/* تصميم النص */
+.offer-line {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* تصميم رمز النسخ */
+.copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+/* تصميم أيقونة النسخ */
+.copy-icon {
+    font-size: 24px;
+    color: #0e5aa7;
+}
+
+.copied-icon {
+    font-size: 24px;
+    color: rgb(15, 15, 82);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+.carousel-inner {
+    border-radius: 10px;
+}
+
+/* تخصيص الأزرار الخاصة بالـ carousel فقط باستخدام فئة carousel-button */
+.carousel-button {
+    background-color: #ddd;
+    /* لون الخلفية */
+    border: none;
+    border-radius: 50%;
+    /* لجعل الأزرار دائرية */
+    width: 6px;
+    /* عرض الزر */
+    height: 6px;
+    /* ارتفاع الزر */
+    margin: 0 5px;
+    /* المسافة بين الأزرار */
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    /* اللون عند التفعيل */
+}
+
+/* التحديد عند التمرير على الزر */
+
+
+/* تغيير شكل الزر عند كونه "active" */
+.carousel-button.active {
+    width: 20px;
+    /* الحجم عند التفعيل (شرط) */
+    height: 6px;
+    /* ارتفاع الزر عند التفعيل */
+    border-radius: 15px;
+    /* جعل الزر بشكل خطي (شرط) */
+    background-color: #ffffff;
+}
+
+
+/* إخفاء الأزرار بشكل افتراضي */
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* إظهار الأزرار عند المرور بالماوس على الـ carousel-inner */
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+    opacity: 1;
+    visibility: visible;
+}
+
+img {
+    transition: all 0.2s ease-in;
+}
+
+.carousel:hover img {
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+.inner-col {
+    background-color: #ffffff;
+    border-radius: 8px;
+
+}
+
+.fs1 {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.fs2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .inner-col {
+
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////// 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* بدايةً 8 صور في صف واحد */
+    gap: 20px;
+    /* المسافة بين الصور */
+}
+
+.category-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+/* When hovered, the image slightly increases in size */
+.category-item:hover img {
+    transform: scale(1.03);
+    filter: brightness(80%);
+    /* Darken image */
+}
+
+/* Add a grey overlay when the image is clicked */
+.category-item:active img {
+    transform: scale(1.01);
+    /* Slightly increase size on click */
+    filter: brightness(50%) grayscale(50%);
+    /* Grey overlay */
+}
+
+/* Optional: This can also make the clicked image stand out a bit more */
+.category-item:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Adds a slight shadow */
+}
+
+
+/* عند تصغير الشاشة أكثر من 1024px (مثلاً في التابلت) نخليها 4 صور في الصف */
+@media (max-width: 1024px) {
+    .categories-container {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 صور في الصف */
+    }
+}
+
+/* عند تصغير الشاشة أكثر من 768px، نخليها 3 صور في الصف */
+@media (max-width: 768px) {
+    .categories-container {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 صور في الصف */
+    }
+}
+
+/* عند تصغير الشاشة أكثر من 480px، نخليها 2 صور في الصف */
+@media (max-width: 480px) {
+    .categories-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 صور في الصف */
+    }
+}
+
+/* إذا كانت الشاشة صغيرة جدًا (أقل من 480px) نخليها صورة واحدة في الصف */
+@media (max-width: 320px) {
+    .categories-container {
+        grid-template-columns: 1fr;
+        /* صورة واحدة في الصف */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-adv {
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.borderrdis {
+    border-radius: 10px;
+
+    // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.in-crsol {
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+.fs1 {
+    font-size: 9px;
+}
+
+
+
+.h-custom {
+    height: 150px;
+}
+
+
+.card-bord {
+    border: 0.5px solid rgb(224, 229, 236);
+    border-radius: 15px;
+}
+
+
+.card-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #0e5aa7;
+    color: white;
+    position: absolute;
+    right: 2px;
+    top: 43%;
+    width: 30px;
+    height: 30px;
+    // font-size: 30px;
+    z-index: 22;
+}
+
+.card-off {
+    background-color: rgb(250, 199, 199);
+    // width: 35px;
+    padding: 2px;
+    font-size: 12px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.in-fotter{
+    max-width: 1350px;
+    margin: auto;
+}
+
+.footer{
+    background-color: #0e5aa7;
+    color: #ffffff;
+    
+}
+
+.btop{
+    background-color: #083a6d;
+}
+
+.cov-ico-foot{
+    background-color: rgba(0,0,0,0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.app{
+    max-width: 1350px;
+    margin: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+.accordion-button {
+background-color: #0e5aa7;
+color: #ddd;
+border: none;
+}
+
+
+
+.accordion-body{
+    background-color: #083a6d;
+    color: #ddd;
+}

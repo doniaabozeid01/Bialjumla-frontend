@@ -1,0 +1,207 @@
+<div class="parent">
+
+
+    <div class="row">
+        <div class="col-md-3 px-4 ">
+            <div class="py-3 ps-4  bg-white bord">
+                <h3>Beverages</h3>
+            <p class="mb-0">coffee</p>
+            <p class="mb-0">tea</p>
+            <p class="mb-0">juices</p>
+            <p class="mb-0">soft drinks</p>
+            <p class="mb-0">powdered drinks</p>
+            <p class="mb-0">kids drinks</p>
+            <p class="mb-0">water</p>
+            </div>
+        </div>
+
+        <div class="col-md-9 mt-5 px-4">
+            <!-- <img class="w-100 img-adv" src="../../../assets/Ramadan_Hero_Banner_Web_EN_copy_3_b1a5df51f8.jpg" alt=""> -->
+
+            <div class="w-100 img-adv mb-5 d-flex justify-content-between bg-success" style="height: 300px;" role="button" (click)="goToInSection()" >
+
+                <h3 class="m-auto fs-1 text-white">Fresh Food</h3>
+
+                <div>
+                    <img src="../../../assets/17102021_egy_web_hp_hb_onsite_fresh_food_en_171cfc2b6c.png"
+                        class="w-100 h-100 img-in-title" alt="">
+                </div>
+            </div>
+
+
+            <div class="">
+                <h2 class="fw-bold">Top Categories</h2>
+
+
+                <div class="categories-container">
+                    <div class="category-item "><img src="../../../assets/3_ab581e23b9_6942e88a5c_ec147d4054.avif"
+                            alt="Category 1"></div>
+                    <div class="category-item"><img src="../../../assets/4_1b844432e5.avif" alt="Category 2"></div>
+                    <div class="category-item"><img src="../../../assets/Hot_Prices_en_copy_2_59a060540e.avif"
+                            alt="Category 3">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Hot_Prices_en_copy_4_767511c8d6.avif"
+                            alt="Category 4">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_2_ed6f135ac3.avif"
+                            alt="Category 5">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_8_2230087055.png"
+                            alt="Category 6">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_def74ea03e.avif"
+                            alt="Category 7">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Microsoft_Teams_image_6076de95a1.png"
+                            alt="Category 8">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="categories-container my-5">
+                    <div class="category-item"><img src="../../../assets/3_ab581e23b9_6942e88a5c_ec147d4054.avif"
+                            alt="Category 1"></div>
+                    <div class="category-item"><img src="../../../assets/4_1b844432e5.avif" alt="Category 2"></div>
+                    <div class="category-item"><img src="../../../assets/Hot_Prices_en_copy_2_59a060540e.avif"
+                            alt="Category 3">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Hot_Prices_en_copy_4_767511c8d6.avif"
+                            alt="Category 4">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_2_ed6f135ac3.avif"
+                            alt="Category 5">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_8_2230087055.png"
+                            alt="Category 6">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Artboard_1_copy_def74ea03e.avif"
+                            alt="Category 7">
+                    </div>
+                    <div class="category-item"><img src="../../../assets/Microsoft_Teams_image_6076de95a1.png"
+                            alt="Category 8">
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="my-5">
+                    <h2>Top Selling Grocery!</h2>
+
+                    <owl-carousel-o [options]="customOptions2" class="customOptions2">
+
+                        <ng-container *ngFor="let slide of slidesStore">
+                            <ng-template carouselSlide>
+                                <div class="card card-bord w-100 position-relative " style="width: 18rem;">
+
+
+                                    <owl-carousel-o [options]="customOptions3" class="customOptions3"
+                                        style="height: 170px;">
+
+                                        <ng-container *ngFor="let slide of slidesStore2">
+                                            <ng-template carouselSlide>
+                                                <img [src]="slide.src" class="w-75 m-auto " style="height: 170px;"
+                                                    alt="...">
+                                            </ng-template>
+                                        </ng-container>
+
+                                    </owl-carousel-o>
+
+
+                                    <div class="card-add"><i class="fa-solid fa-plus"></i></div>
+                                    <div class="card-off">
+                                        <p class="mb-0 text-danger">14%</p>
+                                        <p class="mb-0 text-danger">Off</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center">
+                                            <h5 class="card-title">14</h5>
+                                            <div class="ms-1">
+                                                <p class="m-0 fs1">0.25</p>
+                                                <p class="m-0 fs1">EGP</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-danger"><del class="del fs1 text-dark">EGP170.50</del> 19% OFF
+                                        </p>
+                                        <p class="card-text">Some quick...</p>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </ng-container>
+
+                    </owl-carousel-o>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="">
+                    <p>Order all your grocery products and get them delivered in 60 minutes with Carrefour Egypt
+
+                        Our lifestyle has become very fast and time-consuming such that daily grocery orders have become
+                        a burden.
+                        The process of buying - either going to the supermarket or waiting a long time for the delivery
+                        to arrive is
+                        not an option anymore. At Carrefour, we are always trying to provide the best and easiest
+                        shopping
+                        experience for our customers. Carrefour Egypt offers “Carrefour Now” service delivering all
+                        groceries within
+                        60 minutes. Buy online and enjoy constant offers all year long on the Carrefour website and the
+                        Maf
+                        Carrefour app.
+
+                        You can order all your daily groceries including dairy products and eggs that are packed in
+                        special packages
+                        to maintain the temperature of the products, so that it reaches you with its quality intact.
+                        You'll find all
+                        kinds of milk, cheese, and yogurt products from the best international and local brands like
+                        Juhayna, lamar,
+                        Al Marai, Dina farms and Lactel, as well as ghee & butter, eggs and a wide variety of cold cuts
+                        & meat
+                        snacks like luncheon, smoked turkey and pastrami.
+
+                        Shop now for fruits, vegetables & meat online
+
+                        You can also find all kinds of fresh fruits and vegetables, herbs and green leaves, as well as
+                        meat and
+                        poultry delivered fresh in 60 minutes. If you have any questions, or would like to get in touch
+                        with us,
+                        we’re always happy to receive your calls on 16061. We also offer easy returns, so you can return
+                        your items
+                        within 14 days from the date of purchase (or 30 days from date of purchase in case of
+                        manufacturing
+                        defects). Please check our return & exchange policy to know more. Pay for your online purchases
+                        with any
+                        credit card or pay using cash on delivery. Browse Carrefour Egypt now to get the best prices on
+                        all of your
+                        favourite products and an unparalleled shopping experience.</p>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</div>

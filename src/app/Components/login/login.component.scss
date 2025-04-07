@@ -1,0 +1,15 @@
+.parent{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdnprod.mafretailproxy.com/assets/home-web/bg-main.webp');
+    background-size: cover;        /* لتغطية العنصر بالكامل */
+    background-repeat: no-repeat;  /* لمنع تكرار الصورة */
+    background-position: center;   /* لوضع الصورة في المنتصف */
+    background-attachment: fixed;  /* لتثبيت الصورة أثناء التمرير */
+}
+
+
+.bord{
+    border-radius: 10px;
+    background-color: #f6f7fa;
+}
