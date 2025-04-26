@@ -1,5 +1,5 @@
-<div class="parent d-flex justify-content-center align-items-center px-2">
-    <div class="d-flex align-items-center flex-column">
+<div class="parent d-flex justify-content-center align-items-center px-2 ">
+    <div class="d-flex align-items-center flex-column w-30">
         <!-- <img class="w-25 my-3" src="../../../assets/widelogo-removebg-preview.png" alt=""> -->
         <img class="my-3" src="../../../assets/22-011.png" style="width: 150px;" alt="">
         <div class="w-100 m-auto bord out-cont">
@@ -71,9 +71,24 @@
                         {{ 'register.email' | translate }} </div>
 
                     <!-- Phone -->
-                    <input id="PhoneNumber" formControlName="PhoneNumber" type="tel" placeholder="{{ 'register.placeholders.phone' | translate }}"
-                        class="mt-3 text-end"
-                        [ngClass]="{'border-danger': registerForm.get('PhoneNumber')?.invalid && registerForm.get('phone')?.touched}" />
+                    <div class="d-flex ">
+                        <input id="countryCode" formControlName="countryCode" type="tel"
+                            placeholder="+20" class="mt-3 text-center w-15" 
+                            [ngClass]="{
+                                'border-danger': registerForm.get('countryCode')?.invalid && registerForm.get('phone')?.touched,
+                                'ms-1': currentLang === 'ar',
+                                'me-1': currentLang !== 'ar'
+                              }"
+                               />
+
+                        <input id="PhoneNumber" formControlName="PhoneNumber" type="tel"
+                            placeholder="{{ 'register.placeholders.phone' | translate }}" class="mt-3 text-end"
+                            [ngClass]="{'border-danger': registerForm.get('PhoneNumber')?.invalid && registerForm.get('phone')?.touched}" />
+
+                    </div>
+
+
+
                     <div *ngIf="registerForm.get('PhoneNumber')?.invalid && registerForm.get('PhoneNumber')?.touched"
                         class="text-danger">
                         {{ 'register.phone' | translate }} </div>
@@ -88,7 +103,7 @@
                         <span
                             [ngClass]="{'bg-danger': registerForm.get('password')?.invalid && registerForm.get('password')?.touched}"
                             class="tagob justify-content-center align-items-center text-white me-1">!</span>
-                            {{ 'register.passwordHint' | translate }}
+                        {{ 'register.passwordHint' | translate }}
                     </p>
 
 
@@ -100,20 +115,24 @@
 
                             <select id="day" formControlName="day" class="form-control w-50"
                                 [ngClass]="{'border-danger': registerForm.get('day')?.invalid && registerForm.get('day')?.touched}">
-                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.day' | translate }}</option>
+                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.day' |
+                                    translate }}</option>
                                 <option *ngFor="let day of days" [value]="day" class="text-center">{{ day }}</option>
                             </select>
 
                             <select id="month" formControlName="month" class="form-control"
                                 [ngClass]="{'border-danger': registerForm.get('month')?.invalid && registerForm.get('month')?.touched}">
-                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.month' | translate }}</option>
-                                <option *ngFor="let month of months" [value]="month" class="text-center">{{ 'register.months.' + month | translate }}
+                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.month'
+                                    | translate }}</option>
+                                <option *ngFor="let month of months" [value]="month" class="text-center">{{
+                                    'register.months.' + month | translate }}
                                 </option>
                             </select>
 
                             <select id="year" formControlName="year" class="form-control"
                                 [ngClass]="{'border-danger': registerForm.get('year')?.invalid && registerForm.get('year')?.touched}">
-                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.year' | translate }}</option>
+                                <option value="" disabled selected class="text-center">{{ 'register.placeholders.year' |
+                                    translate }}</option>
                                 <option *ngFor="let year of years" [value]="year" class="text-center">{{ year }}
                                 </option>
                             </select>
@@ -125,16 +144,19 @@
                     <select id="nationality" formControlName="nationality" class="form-control"
                         [ngClass]="{'border-danger': registerForm.get('nationality')?.invalid && registerForm.get('nationality')?.touched}">
                         <option value="" disabled selected>{{ 'register.nationality' | translate }}</option>
-                        <option *ngFor="let country of countries" [value]="country">{{ 'register.countries.' + country | translate }}</option>
+                        <option *ngFor="let country of countries" [value]="country">{{ 'register.countries.' + country |
+                            translate }}</option>
                     </select>
 
                     <!-- Terms and Conditions -->
                     <label class="mt-3">
                         <input type="checkbox" formControlName="terms" />{{ 'register.termsLabel' | translate }}
                     </label>
+
                     <div *ngIf="registerForm.get('terms')?.invalid && registerForm.get('terms')?.touched"
                         class="text-danger">
-                        {{ 'register.termsError' | translate }}                    </div>
+                        {{ 'register.termsError' | translate }}
+                    </div>
 
 
                     <div *ngIf="loginError" class="text-danger text-center ">
@@ -145,12 +167,14 @@
 
 
                     <!-- Submit Button -->
-                    <button type="submit" [disabled]="registerForm?.invalid" class="base-btn-bg-color">{{ 'register.registerBtn' | translate }}</button>
+                    <button type="submit" [disabled]="registerForm?.invalid" class="base-btn-bg-color">{{
+                        'register.registerBtn' | translate }}</button>
                 </form>
 
 
                 <p class="text-center mt-3">{{ 'register.alreadyHaveAccount' | translate }}
-                    <span class="text-primary" role="button" [routerLink]="'/login'">{{ 'register.login' | translate }}</span>
+                    <span class="text-primary" role="button" [routerLink]="'/login'">{{ 'register.login' | translate
+                        }}</span>
                 </p>
             </div>
         </div>

@@ -34,6 +34,7 @@ export class SignupComponent {
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
+      countryCode: ['', [Validators.required ]],
       PhoneNumber: ['', [Validators.required ]], // , Validators.pattern('^[0-9]{10}$')
       password: ['', [Validators.required, Validators.minLength(6)]],
       day: [''],
