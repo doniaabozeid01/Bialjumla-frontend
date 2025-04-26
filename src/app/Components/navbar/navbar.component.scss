@@ -121,3 +121,104 @@
     // your specific styles for extra-large screens
   }
 }
+
+
+
+
+.icon {
+  color: #0e5aa7;
+}
+
+
+.tel-nav{
+  top: 0;
+  z-index: 99999;
+}
+
+
+
+input.form-control.text-end {
+  padding-right: 50px; /* ضبط المسافة في اللغة العربية */
+  padding-left: 0; /* حذف المسافة على اليسار في اللغة العربية */
+}
+
+
+.sidebar{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+  overflow: auto;
+}
+
+
+.separator{
+  height: 8px;
+  background-color: #F5F5F5;
+  width: 100%;
+}
+
+
+
+
+
+
+.categorybar{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999999;
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* هذا لتفعيل التأثيرات السلسة عند توسيع العناصر */
+// .transition-height {
+//   overflow: hidden;
+//   transition: height 0.3s ease;
+// }
+
+// .transition-height > div {
+//   transition: opacity 0.3s ease;
+// }
+
+// .d-flex {
+//   display: flex;
+//   align-items: center;
+// }
+
+// /* يمكن إضافة بعض الأنماط الجمالية */
+// // .ps-3 {
+// //   padding-left: 30px;
+// // }
+
+// .fa {
+//   cursor: pointer;
+// }
+
+// .d-flex.justify-content-between {
+//   padding: 10px 0;
+// }
+
+// li {
+//   list-style-type: none;
+// }

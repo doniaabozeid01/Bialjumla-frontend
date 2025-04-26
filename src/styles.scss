@@ -15,6 +15,10 @@
 
 
 
+body[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
 
 
 
@@ -25,9 +29,40 @@
 }
 
 .base-bg-color {
-
   background-color: #0e5aa7;
 }
+
+
+.base-btn-bg-color {
+  background-color: #052e7a;
+  color: white;
+}
+
+.base-btn-bg-color:hover {
+  background-color: #052768;
+  color: white;
+}
+
+
+
+.base-btn-bg-light-color {
+  background-color: white;
+  color: #052e7a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 body {
@@ -84,6 +119,13 @@ body {
 .customOptions1 .owl-carousel .owl-stage {
   display: flex;
   /* تأكد من أن العناصر في الـ carousel تعرض بشكل أفقي */
+}
+
+
+
+.customOptions1 .owl-nav {
+  direction: ltr !important;
+  /* ده بيمنع إن الأسهم تتقلب في RTL */
 }
 
 // .card {
@@ -374,15 +416,15 @@ body {
   position: absolute;
   right: -15px;
   top: 31px;
-  border-radius: 50px!important;
+  border-radius: 50px !important;
 }
 
 .customOptionsCart .owl-prev {
   position: absolute;
   left: -15px;
   top: 31px;
-  border-radius: 50px!important;
-  background-color: #d6d6d6!important;
+  border-radius: 50px !important;
+  background-color: #d6d6d6 !important;
 }
 
 
@@ -578,12 +620,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* لتجعل الصور دائرية */
+  border-radius: 50%;
+  /* لتجعل الصور دائرية */
   transition: transform 0.3s ease;
 }
 
 .owl-dot-image:hover img {
-  transform: scale(1.1); /* تكبير الصورة عند التمرير عليها */
+  transform: scale(1.1);
+  /* تكبير الصورة عند التمرير عليها */
 }
 
 
@@ -597,6 +641,41 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:768px) {
+
+  .owl-next,
+  .owl-prev {
+    // background-color: #0e5aa7 !important;
+    display: none !important;
+  }
+
+
+}
 
 
 

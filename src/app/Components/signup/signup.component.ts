@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { ApisService } from 'src/app/Services/apis.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,6 +11,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupComponent {
   registerForm!: FormGroup;
+  loginError:any = "";
+  currentLang:string ='en';
   years: number[] = [];
   months: string[] = [
     'January', 'February', 'March', 'April', 'May', 'June',
@@ -21,14 +26,15 @@ export class SignupComponent {
     'France', 'Italy', 'Spain', 'Mexico', 'Brazil', 'Russia', 'Japan', 'China', 'South Korea'
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private apiService : ApisService, private route: Router , private translate: TranslateService) {}
 
   ngOnInit(): void {
+    this.currentLang = localStorage.getItem('lang') ?? 'en';
     this.registerForm = this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required ]], // , Validators.pattern('^[0-9]{10}$')
+      PhoneNumber: ['', [Validators.required ]], // , Validators.pattern('^[0-9]{10}$')
       password: ['', [Validators.required, Validators.minLength(6)]],
       day: [''],
       month: [''],
@@ -78,6 +84,29 @@ export class SignupComponent {
   onSubmit(): void {
     if (this.registerForm.valid) {
       console.log(this.registerForm.value);
+      this.apiService.Register(this.registerForm.value).subscribe({
+        next:(response)=>{
+          console.log(response);
+          this.route.navigate(['/home']);
+        },
+        error:(err)=>{
+          console.log(err);
+
+          if (err.error?.errors) {
+            // .NET ModelState errors
+            this.loginError = Object.values(err.error.errors).flat();
+          } else if (typeof err.error === 'string') {
+            // simple string error (زي "This email is already exist.")
+            this.loginError = [err.error];
+          } else if (err.error?.message) {
+            this.loginError = [err.error.message];
+          } else if (err.message) {
+            this.loginError = [err.message];
+          } else {
+            this.loginError = ['حدث خطأ ما، حاول مرة أخرى.'];
+          }
+        }
+      })
       // يمكنك إرسال البيانات هنا إلى الخادم عبر API مثلاً
     } else {
       console.log('Form is not valid');

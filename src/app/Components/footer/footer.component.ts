@@ -20,14 +20,21 @@ export class FooterComponent {
         this.checkIfHomePage();
       }
     });
+    this.checkIfHomePage();  // تأكد من التحقق عند تحميل الـ component
+
   }
 
   checkIfHomePage() {
     // تحقق من أن الصفحة الحالية هي "home"
-    if (this.router.url === '/home') {
-      this.isHomePage = true;  // إذا كانت الصفحة هي الصفحة الرئيسية
+    // يمكنك التحقق إذا كانت الصفحة هي الصفحة الرئيسية باستخدام URL
+    if (this.router.url === '/cart' ) {
+      console.log('cart');
+      
+      this.isHomePage = false;  // إذا كانت الصفحة هي الصفحة الرئيسية
     } else {
-      this.isHomePage = false;  // إذا كانت صفحة أخرى
+      console.log('! cart');
+
+      this.isHomePage = true;  // إذا كانت صفحة أخرى
     }
   }
 

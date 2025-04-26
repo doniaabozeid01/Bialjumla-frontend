@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   selector: 'app-cart',
@@ -7,8 +8,16 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
+
+  currentLang: string = 'en';
+  constructor(private languageService: LanguageService) {}
+
+
+
+
+
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
@@ -16,21 +25,22 @@ export class CartComponent {
     navSpeed: 700,
     nav: true,         // Show the arrows
     navText: ['←', '→'], // Custom arrows (can be changed)
-    items:6
-    // responsive: {
-    //   0: {
-    //     items: 1
-    //   },
-    //   400: {
-    //     items: 2
-    //   },
-    //   740: {
-    //     items: 3
-    //   },
-    //   940: {
-    //     items: 5
-    //   }
-    // },
+    // items:6
+    responsive: {
+      0: {
+        items: 3
+      },
+      400: {
+        items: 4
+      },
+      640: {
+        items: 6
+      },
+      1200: {
+        items: 6 // يبقى 6 حتى مع الشاشات الكبيرة
+      }
+    }
+
   }
 
 
@@ -45,10 +55,10 @@ export class CartComponent {
   ];
 
   selectedValue: number = 1;  // القيمة المختارة افتراضيًا
-  
+
   numbers: number[] = Array.from({ length: 12 }, (_, index) => index + 1);
   // console.log("this.numbers.indexOf(this.selectedValue) : ", this.numbers.indexOf(this.selectedValue));
-  
+
   // دالة لزيادة القيمة
   increment() {
     const currentIndex = this.numbers.indexOf(Number(this.selectedValue));
@@ -56,7 +66,7 @@ export class CartComponent {
     // console.log("this.numbers.indexOf(this.selectedValue) : ", this.numbers.indexOf(Number(this.selectedValue)));
     // console.log("currentIndex : ", currentIndex);
 
-    
+
     if (currentIndex < this.numbers.length - 1) {
       this.selectedValue = this.numbers[currentIndex + 1];
     }
@@ -69,7 +79,26 @@ export class CartComponent {
       this.selectedValue = this.numbers[currentIndex - 1];
     }
   }
-  addToCart():void{
+  addToCart(): void {
 
   }
+
+
+  language: string = 'en';
+  ngOnInit() {
+    this.language = localStorage.getItem('lang') || 'en';
+    this.languageService.languageChanged$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
+
+  // constructor(private languageService: LanguageService) {}
+
+  // // دالة لاستدعاء دالة تغيير اللغة من الخدمة
+  // switchLanguage(language: string) {
+  //   this.languageService.switchLanguage(language);
+  // }
+
+
+
 }

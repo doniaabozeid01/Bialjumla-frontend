@@ -12,11 +12,13 @@ export class HomeComponent {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
-    pullDrag: false,
+    pullDrag: true,
     dots: false,
     navSpeed: 700,
     nav: true,         // Show the arrows
     navText: ['←', '→'], // Custom arrows (can be changed)
+    rtl: true,
+
     responsive: {
       0: {
         items: 1
@@ -45,6 +47,8 @@ export class HomeComponent {
     navSpeed: 700,
     nav: true,         // Show the arrows
     navText: ['←', '→'], // Custom arrows (can be changed)
+    rtl: true,
+
     responsive: {
       0: {
         items: 1
@@ -66,13 +70,15 @@ export class HomeComponent {
 
   customOptions3: OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: false,
     dots: true,
     nav: false,
     navSpeed: 700,
     autoplay: false,
+    rtl: true,
+
     // autoplayTimeout: 3000,
     // autoplayHoverPause: false,
     // autoplayHoverPlay:true, 

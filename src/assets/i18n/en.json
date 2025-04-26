@@ -1,0 +1,108 @@
+{
+    "title": "Welcome to the website",
+    "loginInNav":"Login and Register",
+    "delivery" : "Delivery within 2 hours . 15,000+ products",
+    "backToTop":"Back To Top",
+    "greeting": "Hello",
+    "languageSelector": {
+        "title": "choose country",
+        "english": "English",
+        "arabic": "Arabic",
+        "description": "You have selected English. The content will be displayed in English.",
+        "Localisation": "Localisation settings",
+        "Select-language": "Select your preferred language",
+        "confirm": "Confirm",
+        "cancel": "Cancel"
+    },
+    "searchPlaceholder": "Search for products",
+    "in-category": {
+        "sortBy": "Sort by",
+        "sort": "Sort",
+        "load": "LOAD MORE",
+        "filterBy": "Filter by",
+        "filter": "Filter",
+        "sortList": {
+            "relevance": "Relevance",
+            "priceL": "Price (lowest first)",
+            "priceH": "Price (highest first)"
+        },
+        "filterList": {
+            "showBtn": "Show",
+            "resetBtn": "Reset"
+        }
+    },
+    "LOGIN": {
+        "INVALID": "Email or password is incorrect.",
+        "WELCOME": "Get access to over 190,000 quality products",
+        "NEW_HERE": "New to Bialjumla?",
+        "SIGNUP": "Sign up for a new account",
+        "log": "log in",
+        "placeholders": {
+            "email": "Email address",
+            "password": "Password"
+        }
+    },
+    "register": {
+        "createAccount": "Create new account",
+        "title": "Title is required",
+        "firstName": "First Name is required",
+        "lastName": "Last Name is required",
+        "email": "Please enter a valid email",
+        "phone": "Mobile number format is wrong. Please use right format (1001234567)",
+        "passwordHint": "Create a password with 8 characters, including both upper and lower case letters, and at least one number.",
+        "dateOfBirth": "Date of birth (optional)",
+        "nationality": "Nationality (optional)",
+        "termsLabel": "I agree to the terms and conditions as well as to our Privacy Policy.",
+        "termsError": "You must agree to the terms and conditions",
+        "registerBtn": "Register",
+        "alreadyHaveAccount": "Already have an account?",
+        "login": "Log in",
+        "titles": {
+            "mr": "Mr",
+            "mrs": "Mrs",
+            "miss": "Miss/Mr"
+        },
+        "placeholders": {
+            "firstName": "First name",
+            "lastName": "Last name",
+            "email": "Email address",
+            "phone": "Phone number",
+            "password": "Password",
+            "day": "Day",
+            "month": "Month",
+            "year": "Year",
+            "nationality": "Nationality (optional)"
+        },
+        "months": {
+            "January": "January",
+            "February": "February",
+            "March": "March",
+            "April": "April",
+            "May": "May",
+            "June": "June",
+            "July": "July",
+            "August": "August",
+            "September": "September",
+            "October": "October",
+            "November": "November",
+            "December": "December"
+        },
+        "countries": {
+            "United States": "United States",
+            "Canada": "Canada",
+            "United Kingdom": "United Kingdom",
+            "Australia": "Australia",
+            "India": "India",
+            "Germany": "Germany",
+            "France": "France",
+            "Italy": "Italy",
+            "Spain": "Spain",
+            "Mexico": "Mexico",
+            "Brazil": "Brazil",
+            "Russia": "Russia",
+            "Japan": "Japan",
+            "China": "China",
+            "South Korea": "South Korea"
+        }
+    }
+}

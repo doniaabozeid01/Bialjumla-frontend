@@ -18,13 +18,13 @@
 
 
 /* الحاوية التي تحتوي على النص والزر */
-.offer-container {
-    display: flex;
-    justify-content: space-between;
-    /* لتوزيع العناصر بين اليسار واليمين */
-    align-items: center;
-    margin-top: 70px;
-}
+// .offer-container {
+//     display: flex;
+//     justify-content: space-between;
+//     /* لتوزيع العناصر بين اليسار واليمين */
+//     align-items: center;
+//     margin-top: 70px;
+// }
 
 /* تصميم النص */
 .offer-line {
@@ -66,6 +66,12 @@
 
 
 
+@media (max-width: 768px) {
+    // .parent {
+    //     margin-top: 0px;
+    // }
+}
+
 
 
 
@@ -106,6 +112,10 @@
 
 .carousel-inner {
     border-radius: 10px;
+}
+
+.advertiseCarosel{
+    min-height: 120px;
 }
 
 /* تخصيص الأزرار الخاصة بالـ carousel فقط باستخدام فئة carousel-button */
@@ -156,8 +166,9 @@
     visibility: visible;
 }
 
-img {
+.advertiseCarosel img {
     transition: all 0.2s ease-in;
+    min-height: 120px;
 }
 
 .carousel:hover img {
@@ -303,7 +314,7 @@ img {
 /* عند تصغير الشاشة أكثر من 768px، نخليها 3 صور في الصف */
 @media (max-width: 768px) {
     .categories-container {
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
         /* 3 صور في الصف */
     }
 }
@@ -311,7 +322,7 @@ img {
 /* عند تصغير الشاشة أكثر من 480px، نخليها 2 صور في الصف */
 @media (max-width: 480px) {
     .categories-container {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
         /* 2 صور في الصف */
     }
 }
@@ -368,7 +379,7 @@ img {
 
 .img-adv {
     border-radius: 10px;
-
+min-height: 70px;
 }
 
 

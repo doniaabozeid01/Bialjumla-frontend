@@ -21,6 +21,17 @@ import { ProductDetailsComponent } from './Components/product-details/product-de
 import { LocationSidebarComponent } from './Components/location-sidebar/location-sidebar.component';
 import * as L from 'leaflet'; // ده بيخليك تستخدمي Leaflet في المشروع
 import 'leaflet-control-geocoder'; // استيراد مكتبة geocoder
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LocalisationComponent } from './Components/localisation/localisation.component';  
+
+
+// إعداد الـ TranslateLoader
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -36,7 +47,8 @@ import 'leaflet-control-geocoder'; // استيراد مكتبة geocoder
     DetailsComponent,
     InCategoryComponent,
     ProductDetailsComponent,
-    LocationSidebarComponent
+    LocationSidebarComponent,
+    LocalisationComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +57,15 @@ import 'leaflet-control-geocoder'; // استيراد مكتبة geocoder
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

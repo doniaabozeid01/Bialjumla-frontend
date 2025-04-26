@@ -63,20 +63,26 @@
 /* عند تصغير الشاشة أكثر من 768px، نخليها 3 صور في الصف */
 @media (max-width: 768px) {
     .categories-container {
-        grid-template-columns: repeat(3, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
         /* 3 صور في الصف */
     }
 
 
-    .col-md-3 {
-        margin-top: 20px;
+    // .col-md-3 {
+    //     margin-top: 20px;
+    // }
+
+
+
+    .parent {
+        margin-top: 150px;
     }
 }
 
 /* عند تصغير الشاشة أكثر من 480px، نخليها 2 صور في الصف */
 @media (max-width: 480px) {
     .categories-container {
-        grid-template-columns: repeat(2, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
         /* 2 صور في الصف */
     }
 }
@@ -112,8 +118,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #0e5aa7;
-    color: white;
+    // background-color: #0e5aa7;
+    // color: white;
     position: absolute;
     right: 2px;
     top: 43%;
@@ -125,14 +131,28 @@
 
 .card-off {
     background-color: rgb(250, 199, 199);
-    // width: 35px;
     padding: 2px;
     font-size: 12px;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     position: absolute;
+    top: 0;
+    left: 0; /* أو right: 0 في RTL */
 }
 
+
+// [dir="rtl"] .card-off {
+//     left: auto;
+//     right: 0;
+
+//     border-top-left-radius: 0;
+//     border-top-right-radius: 10px;
+
+//     border-bottom-right-radius: 0;
+//     border-bottom-left-radius: 10px;
+
+
+// }
 
 .col-md-3 {
     // height: auto !important;
@@ -152,6 +172,7 @@
 
 
 .img-adv {
+    height: 300px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -166,4 +187,12 @@
 
 .div-title{
 
+}
+
+
+
+@media(max-width:768px){
+    .img-adv {
+        height: 200px;
+    }
 }

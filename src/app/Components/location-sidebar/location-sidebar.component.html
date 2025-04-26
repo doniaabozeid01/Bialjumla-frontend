@@ -1,10 +1,10 @@
-<div class="position-fixed parent-sidebar">
+<div class="position-fixed parent-sidebar" >
 
     <div class="sidebar ms-auto position-relative overflow-hidden">
 
-        <div class="position-absolute w-100 up-section py-3 px-2 bg-info">
-            <h3 class="p-2">Add Delivery Location</h3>
-            <div class="d-flex align-items-center py-2 px-4 w-35 rond-circle " style="flex-shrink: 0;">
+        <div class="position-absolute w-100 up-section py-3 px-2 bg-white">
+            <h3 class="ps-2">Add Delivery Location</h3>
+            <div class="d-flex align-items-center py-2 px-2 w-100 rond-circle " style="flex-shrink: 0;">
                 <i class="fa-solid fa-search fs-5 mx-3 position-absolute text-secondary"></i>
                 <input type="text" class="form-control ps-5 rond-circle" placeholder="Area, street or building">
             </div>
@@ -21,16 +21,18 @@
 
 
 
-        <div class="d-flex position-absolute w-100 btns py-3 px-2 bg-info">
+        <div class="d-flex position-absolute w-100 btns py-3 px-2 bg-white">
 
-            <button class="btn w-25 btn-light-blue">Back</button>
-            <button class="btn w-75 ms-1 btn-blue">Yes, deliver to this location</button>
+            <button class="btn w-25 base-btn-bg-light-color">Back</button>
+            <button class="btn w-75 ms-1 base-btn-bg-color">Yes, deliver to this location</button>
         </div>
 
 
 
-        <div>
-            <i class="fa-solid fa-xmark"></i>
-        </div>
+        
+        
+    </div>
+    <div class="d-flex justify-content-center align-items-center position-absolute x-btn p-3" role="button" (click)="hide()">
+        <i class="fa-solid fa-xmark"></i>
     </div>
 </div>

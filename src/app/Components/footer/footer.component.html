@@ -1,9 +1,16 @@
 <div class="footer">
-    <div *ngIf="isHomePage" class="btop w-100" (click)="scrollToTop()">
-        <!-- <div class="btop w-100" > -->
+    <!-- <div *ngIf="isHomePage" class="btop w-100" (click)="scrollToTop()">
         <p role="button" class="text-center py-2">BACK TO TOP</p>
-    </div>
+    </div> -->
 
+    <!-- <div *ngIf="isHomePage" class="btop w-100" (click)="scrollToTop()">
+        <p role="button" class="text-center py-2">BACK TO TOP</p>
+    </div> -->
+
+    <div *ngIf="isHomePage" class="btop w-100" (click)="scrollToTop()">
+        <p role="button" class="text-center py-2">{{ "backToTop" | translate}}</p>
+    </div>
+    
 
     <div class="row in-fotter d-none d-lg-flex pt-3">
         <div class="col-3">

@@ -50,8 +50,8 @@
   
   button {
     padding: 10px 20px;
-    background-color: #052e7a;
-    color: white;
+    // background-color: #052e7a;
+    // color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -63,9 +63,9 @@
     background-color: #ddd;
   }
   
-  button:hover {
-    background-color: #052e7a;
-  }
+  // button:hover {
+  //   background-color: #052e7a;
+  // }
   
 
 
@@ -129,4 +129,16 @@ button {
 .out-cont{
   background-color: #f6f7fa;
 
+}
+
+
+.px{
+  padding: 0 50px;
+}
+
+
+@media(max-width:768px){
+  .px{
+    padding: 0 20px;
+  }
 }

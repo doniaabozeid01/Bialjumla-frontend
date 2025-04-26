@@ -1,0 +1,83 @@
+<div class="position-fixed parent-sidebar" >
+
+    <div class="sidebar position-relative overflow-hidden " [ngStyle]="{
+        'margin-left': langForDirection === 'ar' ? '0' : 'auto',
+        'margin-right': langForDirection === 'en' ? '0' : 'auto'
+      }">
+
+        <div class="position-absolute w-100 up-section pt-3 pb-2 px-2 bg-white">
+            <h3 class="px-4">{{ 'languageSelector.Localisation' | translate }}</h3>
+        </div>
+
+
+        <div class="language-selector my-5">
+            <h2 class="mt-5 pt-4 px-4 mb-0 bord-down">{{ 'languageSelector.title' | translate }}</h2>
+
+            <div class="bord-down" [ngClass]="selectedCountry?'gray':'bg-white'">
+
+                <div (click)="changeSelectedCountry($event)" class="">
+                    <label class=" w-100 p-3 ">
+                        <!-- Radio Button لتحديد اللغة -->
+                        <input type="radio" name="language" value="egp" class="radio-btn">
+
+                        <!-- كلمة "Egypt" مع تكبير الخط -->
+                        <span class="radio-label w-100 mx-3">Egypt</span>
+                    </label>
+                </div>
+
+                <!-- هذا القسم يظهر فقط عندما يتم تحديد الـ Radio Button -->
+                <div class="xx mt-0 pb-3" *ngIf="selectedCountry==true">
+                    <h5>{{ 'languageSelector.Select-language' | translate }}</h5>
+                    <div
+                        class="p-1 d-flex justify-content-center align-items-center bg-secondary-subtle w-75 p-1 rounded">
+                        <button class="btn w-100 mx-1"
+                            [ngClass]="{'bg-white': selectedLanguage === 'en', 'bg-secondary-subtle': selectedLanguage !== 'en'}"
+                            (click)="switchLanguage('en')">English</button>
+                        <button class="btn w-100 mx-1"
+                            [ngClass]="{'bg-white': selectedLanguage === 'ar', 'bg-secondary-subtle': selectedLanguage !== 'ar'}"
+                            (click)="switchLanguage('ar')">عربي</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="d-flex position-absolute w-100 btns py-3 px-2 bg-white">
+            <button class="btn w-50 base-btn-bg-light-color" (click)="cancelChangeLanguage()">{{'languageSelector.cancel' | translate}}</button>
+            <button class="btn w-50 ms-1 base-btn-bg-color" (click)="switchLanguageOverAll()">{{'languageSelector.confirm' | translate}}</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- pc -->
+<div class="d-none d-lg-flex justify-content-center align-items-center position-absolute x-btn p-3"
+role="button"
+(click)="hide()" 
+[ngStyle]="{
+    'right': langForDirection === 'en' ? '24%' : '74%'
+}">        
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+<!-- mobile -->
+<div class="d-flex d-lg-none justify-content-center align-items-center position-absolute x-btn p-3"
+role="button"
+(click)="hide()" 
+[ngStyle]="{
+    'right': langForDirection === 'en' ? '8%' : '80%'
+}">        
+<i class="fa-solid fa-xmark"></i>
+</div>
+
+
+
+</div>

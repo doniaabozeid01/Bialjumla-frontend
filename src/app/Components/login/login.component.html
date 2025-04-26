@@ -1,7 +1,6 @@
-<div class="parent d-flex justify-content-center align-items-center">
+<!-- <div class="parent d-flex justify-content-center align-items-center px-2">
     <div class="d-flex align-items-center flex-column">
 
-        <!-- <img class="w-50 my-3" src="../../../assets/widelogo-removebg-preview.png" alt=""> -->
         <img class="my-3" src="../../../assets/22-011.png" style="width: 150px;" alt="">
 
         <div class="p-5 bord w-100">
@@ -13,4 +12,52 @@
             <h6 class="text-center text-primary" role="button" [routerLink]="'/register'">Sign up for a new account</h6>
         </div>
     </div>
-</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="parent d-flex justify-content-center align-items-center px-2">
+    <div class="d-flex align-items-center flex-column">
+      <img class="my-3" src="../../../assets/22-011.png" style="width: 150px;" alt="">
+  
+      <div class="p-5 bord w-100">
+        <h6 class="mb-5 fs-5 text-center">  {{ 'LOGIN.WELCOME' | translate }}
+        </h6>
+  
+        <input type="email" formControlName="email" placeholder="{{ 'LOGIN.placeholders.email' | translate }}" class="form-control w-100 my-2 py-2" />
+        <input type="password" formControlName="password" placeholder="{{ 'LOGIN.placeholders.password' | translate }}" class="form-control w-100 my-2 py-2" />
+  
+
+        <div *ngIf="loginError" class="text-danger text-center">
+            {{ loginError }}
+          </div>
+          
+
+        <button type="submit" class="w-100 btn my-2 py-2 base-btn-bg-color">{{'LOGIN.log' | translate}}</button>
+  
+        <p class="text-center">  {{ 'LOGIN.NEW_HERE' | translate }}
+        </p>
+        <h6 class="text-center text-primary" role="button" [routerLink]="'/register'">  {{ 'LOGIN.SIGNUP' | translate }}
+        </h6>
+      </div>
+    </div>
+  </form>
+  

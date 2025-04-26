@@ -8,7 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./in-category.component.scss']
 })
 export class InCategoryComponent {
-  constructor(private router :Router){
+  constructor(private router: Router) {
 
   }
 
@@ -46,13 +46,15 @@ export class InCategoryComponent {
 
   customOptions3: OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: false,
     dots: true,
     nav: false,
     navSpeed: 700,
     autoplay: false,
+    rtl: true,
+
     // autoplayTimeout: 3000,
     // autoplayHoverPause: false,
     // autoplayHoverPlay:true, 
@@ -63,7 +65,7 @@ export class InCategoryComponent {
 
 
 
-  goToInSection():void{
+  goToInSection(): void {
     this.router.navigate(['/in-category'])
   }
 
@@ -102,29 +104,60 @@ export class InCategoryComponent {
 
 
 
- // تخزين الأقسام المفتوحة في مصفوفة
- activeSections: string[] = [];
+  // تخزين الأقسام المفتوحة في مصفوفة
+  activeSections: string[] = [];
 
- // دالة لتبديل حالة الفتح للقسم
- toggleSection(section: string) {
-   const index = this.activeSections.indexOf(section);
-   if (index === -1) {
-     // إذا كان القسم غير مفتوح، افتحه
-     this.activeSections.push(section);
-   } else {
-     // إذا كان القسم مفتوحًا، أغلقه
-     this.activeSections.splice(index, 1);
-   }
- }
+  // دالة لتبديل حالة الفتح للقسم
+  toggleSection(section: string) {
+    const index = this.activeSections.indexOf(section);
+    if (index === -1) {
+      // إذا كان القسم غير مفتوح، افتحه
+      this.activeSections.push(section);
+    } else {
+      // إذا كان القسم مفتوحًا، أغلقه
+      this.activeSections.splice(index, 1);
+    }
+  }
 
- // دالة لفحص ما إذا كان القسم مفتوحًا
- isSectionActive(section: string): boolean {
-   return this.activeSections.includes(section);
- }
+  // دالة لفحص ما إذا كان القسم مفتوحًا
+  isSectionActive(section: string): boolean {
+    return this.activeSections.includes(section);
+  }
 
 
 
- goToProductDetails():void{
-  this.router.navigate(['/product-details',1])
- }
+  goToProductDetails(): void {
+    this.router.navigate(['/product-details', 1])
+  }
+
+
+  clicked: boolean = false;
+  deals(): void {
+    this.clicked = !this.clicked;
+  }
+
+  sortClicked: boolean = false;
+  sort(): void {
+    this.sortClicked = true;
+  }
+
+  sortClosed():void{
+    this.sortClicked = false;
+  }
+
+
+
+
+  filterClicked: boolean = false;
+  filter(): void {
+    this.filterClicked = true;
+  }
+
+  filterClosed():void{
+    this.filterClicked = false;
+  }
+
+
+
+
 }

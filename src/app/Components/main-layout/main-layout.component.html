@@ -1,3 +1,7 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet> <!-- سيتم تحميل المحتوى العام هنا -->
 <app-footer></app-footer>
+
+
+<app-location-sidebar *ngIf="isSidebarVisible"></app-location-sidebar>
+<app-localisation *ngIf="isLocalisationVisible"></app-localisation>

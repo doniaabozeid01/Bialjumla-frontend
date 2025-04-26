@@ -10,6 +10,7 @@ import { DetailsComponent } from './Components/details/details.component';
 import { InCategoryComponent } from './Components/in-category/in-category.component';
 import { ProductDetailsComponent } from './Components/product-details/product-details.component';
 import { LocationSidebarComponent } from './Components/location-sidebar/location-sidebar.component';
+import { LocalisationComponent } from './Components/localisation/localisation.component';
 
 const routes: Routes = [
 
@@ -22,7 +23,8 @@ const routes: Routes = [
       { path: 'details', component: DetailsComponent },
       { path: 'in-category', component: InCategoryComponent },
       { path: 'product-details/:id', component: ProductDetailsComponent },
-      { path: 'location', component: LocationSidebarComponent },
+      // { path: 'localisation', component: LocalisationComponent },
+      // { path: 'location', component: LocationSidebarComponent },
       // أي مسارات أخرى تحتاج إلى الـ Navbar
     ]
   },

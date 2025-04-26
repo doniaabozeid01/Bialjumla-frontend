@@ -95,13 +95,15 @@ export class ProductDetailsComponent {
 
   customOptions3: OwlOptions = {
     loop: true,
-    mouseDrag: true,
-    touchDrag: true,
+    mouseDrag: false,
+    touchDrag: false,
     pullDrag: false,
     dots: true,
     nav: false,
     navSpeed: 700,
     autoplay: false,
+    rtl:true,
+
     // autoplayTimeout: 3000,
     // autoplayHoverPause: false,
     // autoplayHoverPlay:true, 
@@ -128,6 +130,8 @@ export class ProductDetailsComponent {
     navSpeed: 700,
     nav: true,         // Show the arrows
     navText: ['←', '→'], // Custom arrows (can be changed)
+    rtl:true,
+
     responsive: {
       0: {
         items: 1
