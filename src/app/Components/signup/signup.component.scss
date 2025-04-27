@@ -1,106 +1,111 @@
-.parent{
-    width: 100%;
-    height: 100vh;
-    background-image: url('https://cdnprod.mafretailproxy.com/assets/home-web/bg-main.webp');
-    background-size: cover;        /* لتغطية العنصر بالكامل */
-    background-repeat: no-repeat;  /* لمنع تكرار الصورة */
-    background-position: center;   /* لوضع الصورة في المنتصف */
-    background-attachment: fixed;  /* لتثبيت الصورة أثناء التمرير */
+.parent {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://cdnprod.mafretailproxy.com/assets/home-web/bg-main.webp');
+  background-size: cover;
+  /* لتغطية العنصر بالكامل */
+  background-repeat: no-repeat;
+  /* لمنع تكرار الصورة */
+  background-position: center;
+  /* لوضع الصورة في المنتصف */
+  background-attachment: fixed;
+  /* لتثبيت الصورة أثناء التمرير */
 }
 
 
-.bord{
-    border-radius: 10px;
+.bord {
+  border-radius: 10px;
 }
 
 
 
 
 .form-container {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    // background-color: #ac6262;
-  }
-  
-  label {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="password"],
-  input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input[type="radio"],
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    // background-color: #052e7a;
-    // color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  button:disabled {
-    background-color: #ddd;
-  }
-  
-  // button:hover {
-  //   background-color: #052e7a;
-  // }
-  
-
-
-.tagob{
-    background-color: #747474;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    font-size: 10px;
-    display: inline-flex;      /* عرض الأيقونة في نفس السطر */
-
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  // background-color: #ac6262;
 }
 
-
-
-  /* Style for validation error messages */
-.text-danger {
-    color: red;
-    font-size: 12px;
+label {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
 }
 
-button:disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #052e7a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
+  padding: 10px 20px;
+  // background-color: #052e7a;
+  // color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #ddd;
+}
+
+// button:hover {
+//   background-color: #052e7a;
+// }
+
+
+
+.tagob {
+  background-color: #747474;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  font-size: 10px;
+  display: inline-flex;
+  /* عرض الأيقونة في نفس السطر */
+
+}
+
+
+
+/* Style for validation error messages */
+.text-danger {
+  color: red;
+  font-size: 12px;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+button {
+  padding: 10px 20px;
+  // background-color: #052e7a;
+  // color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
 }
 
 // button:hover {
@@ -110,49 +115,56 @@ button {
 
 /* Style for border when invalid */
 .border-danger {
-    border: 2px solid red !important; /* Add red border */
+  border: 2px solid red !important;
+  /* Add red border */
 }
 
-.fs1{
-    font-size: 14px;
-}
-
-
-.continer{
-    height: 63vh;
-    overflow: auto;
-    background-color: #f6f7fa;
+.fs1 {
+  font-size: 14px;
 }
 
 
+.continer {
+  height: 63vh;
+  overflow: auto;
+  background-color: #f6f7fa;
+}
 
-.out-cont{
+
+
+.out-cont {
   background-color: #f6f7fa;
 
 }
 
 
-.px{
+.px {
   padding: 0 50px;
 }
 
 
-@media(max-width:768px){
-  .px{
+@media(max-width:768px) {
+  .px {
     padding: 0 20px;
   }
 }
 
 
 
-
-
-
-.w-30{
+.w-30 {
   width: 30%;
 }
 
 
-.w-15{
-  width: 15%!important;
+.w-15 {
+  width: 15% !important;
+}
+
+
+
+@media (max-width: 786px) {
+  .w-30 {
+    width: 96%;
+  }
+
 }

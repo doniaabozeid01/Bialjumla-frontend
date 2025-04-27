@@ -104,5 +104,8 @@
             "China": "الصين",
             "South Korea": "كوريا الجنوبية"
         }
+    },
+    "Navbar":{
+        "allCategories":"جميع الفئات"
     }
 }

@@ -22,3 +22,26 @@
 .w-30{
     width: 30%;
 }
+.w-96{
+    width:100%;
+
+  }
+
+.pad-5{
+    padding: 40px;
+}
+
+@media (max-width: 786px){
+    .w-30{
+      width: 100%;
+    }
+    
+    .w-96{
+      width: 96%;
+    }
+
+    .pad-5{
+        padding: 40px 20px;
+        // padding: 25px;
+    }
+  }

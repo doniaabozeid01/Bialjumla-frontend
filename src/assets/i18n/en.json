@@ -104,5 +104,8 @@
             "China": "China",
             "South Korea": "South Korea"
         }
+    },
+    "Navbar":{
+        "allCategories":"All Categories"
     }
 }

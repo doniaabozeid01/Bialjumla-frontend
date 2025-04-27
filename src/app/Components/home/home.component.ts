@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { LanguageService } from 'src/app/Services/language.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,27 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  currentLang: string = 'en';
+
+
+  constructor(private languageService: LanguageService) {}
+
+
+  language: string = 'en';
+
+  ngOnInit() {
+    this.language = localStorage.getItem('lang') || 'en';
+    this.languageService.languageChanged$.subscribe(lang => {
+      this.currentLang = lang;
+    });
+  }
+
+
+
+
+
+
 
   customOptions: OwlOptions = {
     loop: true,

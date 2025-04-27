@@ -5,7 +5,7 @@
         <div class="d-flex py-3 pb-0 justify-content-between align-items-center">
 
             <div class="d-flex align-items-center justify-content-center p-2 w-15" style="flex-shrink: 0;">
-                <img src="../../../assets/22-011.png" class="w-100 " style="height: 60px;" alt="">
+                <img src="../../../assets/22-011.png" class="w-100 " style="height: 60px;" alt="" [routerLink]="'/home'">
             </div>
 
             <div class="d-flex align-items-center p-1 w-35 rond-circle position-relative">
@@ -193,13 +193,13 @@
 
         <div class="w-25 d-flex justify-content-between align-items-center">
             <i class="fa-solid fa-bars icon" (click)="showSidebar()"></i>
-            <img src="../../../assets/22-011.png" class="w-75" alt="">
+            <img src="../../../assets/22-011.png" class="w-75" alt="" [routerLink]="'/home'">
         </div>
 
 
         <div class="d-flex justify-content-between align-items-center w-25 ">
             <i class="fa-solid fa-circle-user  fs-3 icon" [routerLink]="'login'"></i>
-            <i class="fa-brands fa-font-awesome fs-3 icon" (click)="showLoc()"></i>
+            <i class="fa-solid fa-earth-americas fs-3 icon" (click)="showLoc()"></i>
             <i class="fa-solid fa-cart-plus  fs-3 icon" [routerLink]="'cart'"></i>
 
         </div>
@@ -284,8 +284,9 @@
 <div class="bg-white categorybar" *ngIf="showCategories">
 
     <div class="py-4 px-3 d-flex align-items-center">
-        <i class="fa-solid fa-arrow-left fs-4 text-start" (click)="hideCategoriesSide()"></i>
-        <p class="mb-0 mx-3">All Categories</p>
+        <i *ngIf="selectedLanguage !== 'ar'" class="fa-solid fa-arrow-left fs-4 text-start" (click)="hideCategoriesSide()"></i>
+        <i *ngIf="selectedLanguage === 'ar'" class="fa-solid fa-arrow-right fs-4 text-start" (click)="hideCategoriesSide()"></i>
+        <p class="mb-0 mx-3">{{"Navbar.allCategories" | translate}}</p>
 
     </div>
 
